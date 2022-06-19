@@ -1,0 +1,41 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        rust:
+          - 1.61.0
+          - stable
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3.0.2
+
+      - name: Setup Rust toolchains
+        run: |
+          rustup toolchain update "${{ matrix.rust }}" --no-self-update
+          rustup default "${{ matrix.rust }}"
+
+      - run: cargo --color always check
+      - run: cargo --color always test
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.0.2
+
+      - name: Setup Rust toolchains
+        run: |
+          rustup toolchain update stable --no-self-update
+          rustup default stable
+          rustup component add clippy rustfmt
+
+      - run: cargo fmt -- --color always --check
+      - run: cargo --color always clippy
