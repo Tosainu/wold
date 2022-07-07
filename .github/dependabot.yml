@@ -10,7 +10,7 @@ updates:
   - package-ecosystem: cargo
     directory: /
     schedule:
-      interval: weekly
-      day: wednesday
+      interval: monthly
+      day: tuesday
       time: "09:00"
       timezone: Asia/Tokyo

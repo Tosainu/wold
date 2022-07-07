@@ -3,21 +3,29 @@ name = "wold"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
-anyhow= "1.0.58"
-axum= "0.5.10"
-serde_bytes= "0.11.6"
-serde_json= "1.0.81"
-tracing= "0.1.35"
+[dependencies.anyhow]
+version = "1.0.57"
+
+[dependencies.axum]
+version = "0.5.11"
 
 [dependencies.serde]
-version = "1.0.137"
+version = "1.0.138"
 features = ["derive"]
+
+[dependencies.serde_bytes]
+version = "0.11.6"
+
+[dependencies.serde_json]
+version = "1.0.82"
 
 [dependencies.tokio]
 version = "1.19.2"
 features = ["macros", "net", "rt"]
 
+[dependencies.tracing]
+version = "0.1.35"
+
 [dependencies.tracing-subscriber]
-version = "0.3.11"
+version = "0.3.14"
 features = ["env-filter"]
