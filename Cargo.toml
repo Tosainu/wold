@@ -20,7 +20,7 @@ version = "0.11.6"
 version = "1.0.82"
 
 [dependencies.tokio]
-version = "1.19.2"
+version = "1.20.1"
 features = ["macros", "net", "rt"]
 
 [dependencies.tracing]
