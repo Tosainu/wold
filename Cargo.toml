@@ -24,7 +24,7 @@ version = "1.20.1"
 features = ["macros", "net", "rt"]
 
 [dependencies.tracing]
-version = "0.1.35"
+version = "0.1.36"
 
 [dependencies.tracing-subscriber]
 version = "0.3.15"
