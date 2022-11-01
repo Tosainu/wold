@@ -27,5 +27,5 @@ features = ["macros", "net", "rt"]
 version = "0.1.36"
 
 [dependencies.tracing-subscriber]
-version = "0.3.15"
+version = "0.3.16"
 features = ["env-filter"]
