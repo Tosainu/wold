@@ -7,7 +7,7 @@ edition = "2021"
 version = "1.0.66"
 
 [dependencies.axum]
-version = "0.5.16"
+version = "0.5.17"
 
 [dependencies.serde]
 version = "1.0.145"
