@@ -10,7 +10,7 @@ version = "1.0.70"
 version = "0.6.7"
 
 [dependencies.serde]
-version = "1.0.147"
+version = "1.0.163"
 features = ["derive"]
 
 [dependencies.serde_bytes]
